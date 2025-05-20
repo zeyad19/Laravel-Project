@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white font-sans;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Card Hover Effect */
+.card {
+  @apply transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus {
+  @apply outline-none ring-2 ring-blue-500 dark:ring-blue-400 transition duration-200;
+}
